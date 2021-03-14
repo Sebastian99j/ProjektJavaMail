@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.Java.Controllers.MainController">
+    <children>
+        <Button fx:id="button1" layoutX="274.0" layoutY="330.0" mnemonicParsing="false" onAction="#zatwierdz" text="Zatwierdź" />
+        <Label layoutX="183.0" layoutY="153.0" text="Email:" />
+        <Label layoutX="182.0" layoutY="215.0" text="Hasło:" />
+        <TextField fx:id="dane1" layoutX="226.0" layoutY="149.0" />
+        <Label layoutX="174.0" layoutY="36.0" text="Logowanie">
+            <font>
+                <Font size="56.0" />
+            </font>
+        </Label>
+        <PasswordField fx:id="dane2" layoutX="226.0" layoutY="210.0" />
+    </children>
+</AnchorPane>

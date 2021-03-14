@@ -1,0 +1,12 @@
+
+Q
+java:S1444"/Make this "public static stageMain" field final(¿˜“ûÿÿÿÿ8áŸÈ‘ƒ/
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(û±á‰8áŸÈ‘ƒ/
+[
+java:S1854">Remove this useless assignment to local variable "controller".(ô¤8áŸÈ‘ƒ/
+X
+java:S2696"6Make the enclosing method "static" or remove this set.(ïˆöÂıÿÿÿÿ8áŸÈ‘ƒ/
+]
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(ûâ–!8áŸÈ‘ƒ/
+L
+java:S1481"/Remove this unused "controller" local variable.(ô¤8áŸÈ‘ƒ/
