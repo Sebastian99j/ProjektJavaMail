@@ -8,7 +8,7 @@ import jakarta.mail.*;
 import jakarta.mail.internet.*;
 
 public class MailJava {
-    public static void sendMail(String recipient, String email, String pass, String title, String text) throws Exception {
+    public static int sendMail(String recipient, String email, String pass, String title, String text) throws Exception {
 
         System.out.println("Przygotowywanie maila");
         Properties properties = new Properties();
@@ -33,6 +33,8 @@ public class MailJava {
 
         Transport.send(message);
         System.out.println("Udało się wysłać mail");
+
+        return 1;
     }
 
     private static Message prepareNewMessage(Session session, String myAccountEmail, String recipient, String title, String text){

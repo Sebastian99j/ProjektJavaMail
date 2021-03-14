@@ -14,6 +14,8 @@ public class MailController {
     @FXML
     private TextField recipientMess;
 
+    int success = 0;
+
     @FXML
     public void sent() throws Exception {
         String email = MainController.getEmail(734658244);
@@ -21,6 +23,15 @@ public class MailController {
         String titleMessage = title.getText();
         String textMessage = text.getText();
         String recipient = recipientMess.getText();
-        MailJava.sendMail(recipient, email, password, titleMessage, textMessage);
+        if (textMessage.equals("") || titleMessage.equals("") || recipient.equals("")){
+            System.out.println("Wszystkie pola powinny być wypełnione");
+        }
+        else {
+            success = MailJava.sendMail(recipient, email, password, titleMessage, textMessage);
+            if (success == 1){
+                title.clear();
+                text.clear();
+            }
+        }
     }
 }

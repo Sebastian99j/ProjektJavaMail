@@ -27,6 +27,7 @@ public class MainController{
     private static String haslo;
     private List<String> users;
     private List<String> pass;
+    MailDAO mailDAO = new MailDAO();
 
     public static String getEmail(int kod) {
         if (kod == 734658244){
@@ -45,8 +46,6 @@ public class MainController{
             return null;
         }
     }
-
-    MailDAO mailDAO = new MailDAO();
 
     void database(){
         users = mailDAO.findMails();
