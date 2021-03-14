@@ -31,10 +31,15 @@ public class MailJava {
 
         Message message = prepareNewMessage(session, myAccountGmail, recipient, title, text);
 
-        Transport.send(message);
-        System.out.println("Udało się wysłać mail");
-
-        return 1;
+        try {
+            Transport.send(message);
+            System.out.println("Udało się wysłać mail");
+            return 1;
+        }
+        catch (Exception e){
+            System.out.println("Niepowodzenie");
+            return 0;
+        }
     }
 
     private static Message prepareNewMessage(Session session, String myAccountEmail, String recipient, String title, String text){
