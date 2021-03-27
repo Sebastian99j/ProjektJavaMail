@@ -3,7 +3,6 @@ package pl.Java.Controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import pl.Java.Controllers.MainController;
 import pl.Java.App.MailJava;
 
 public class MailController {

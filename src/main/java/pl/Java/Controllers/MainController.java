@@ -3,7 +3,6 @@ package pl.Java.Controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -16,8 +15,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class MainController{
-    @FXML
-    private Button button1;
+
     @FXML
     private TextField dane1;
     @FXML
@@ -26,7 +24,7 @@ public class MainController{
     private static String email;
     private static String haslo;
     private List<String> users;
-    private List<String> pass;
+    private String passwordMail;
     MailDAO mailDAO = new MailDAO();
 
     public static String getEmail(int kod) {
@@ -49,8 +47,6 @@ public class MainController{
 
     void database(){
         users = mailDAO.findMails();
-        pass = mailDAO.findPassword();
-        mailDAO.close();
     }
 
     @FXML
@@ -71,13 +67,15 @@ public class MainController{
             for (String mail : users) {
                 if(mail.equals(email)){
                     access1 = 1;
+                    passwordMail = mailDAO.passToEmail(email);
                 }
                 else {
                     System.out.println("Podanego emailu nie ma w bazie danych!");
                 }
             }
-            for (String password : pass) {
-                if(password.equals(haslo)){
+
+            if (passwordMail!=null){
+                if(passwordMail.equals(haslo)){
                     access2 = 1;
                 }
                 else {
@@ -86,9 +84,11 @@ public class MainController{
             }
 
             if (access1 == 1 && access2 == 1){
+                System.out.println("Uzyskano dostęp!");
                 Main.stageMain.close();
-                FXMLLoader loader = new FXMLLoader(new File("/Mail.fxml").toURI().toURL());
-                loader.setLocation(this.getClass().getResource("/Mail.fxml"));
+                mailDAO.close();
+                FXMLLoader loader = new FXMLLoader(new File("/mail.fxml").toURI().toURL());
+                loader.setLocation(this.getClass().getResource("/mail.fxml"));
                 AnchorPane anchorPane = loader.load();
                 Stage stage = new Stage();
 
