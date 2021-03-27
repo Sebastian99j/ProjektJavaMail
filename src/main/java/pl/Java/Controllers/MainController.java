@@ -61,44 +61,61 @@ public class MainController{
         haslo = dane2.getText();
 
         if (email.equals("") || haslo.equals("")){
-            System.out.println("Należy wypełnić oba pola");
+            System.out.println("Należy wypełnić oba pola!");
         }
         else {
-            for (String mail : users) {
-                if(mail.equals(email)){
-                    access1 = 1;
-                    passwordMail = mailDAO.passToEmail(email);
-                }
-                else {
-                    System.out.println("Podanego emailu nie ma w bazie danych!");
-                }
-            }
-
-            if (passwordMail!=null){
-                if(passwordMail.equals(haslo)){
-                    access2 = 1;
-                }
-                else {
-                    System.out.println("Podanego hasla nie ma w bazie danych!");
-                }
-            }
-
-            if (access1 == 1 && access2 == 1){
-                System.out.println("Uzyskano dostęp!");
+            if (email.equals("admin") && haslo.equals("admin")){
+                System.out.println("Zalogowano jako administrator.");
                 Main.stageMain.close();
-                mailDAO.close();
-                FXMLLoader loader = new FXMLLoader(new File("/mail.fxml").toURI().toURL());
-                loader.setLocation(this.getClass().getResource("/mail.fxml"));
+                FXMLLoader loader = new FXMLLoader(new File("/admin.fxml").toURI().toURL());
+                loader.setLocation(this.getClass().getResource("/admin.fxml"));
                 AnchorPane anchorPane = loader.load();
                 Stage stage = new Stage();
 
                 Scene scene = new Scene(anchorPane);
                 stage.setTitle("JavaMail");
                 stage.setScene(scene);
+                stage.setResizable(false);
                 stage.show();
             }
             else {
-                System.out.println("Nie uzyskano dostępu!");
+                for (String mail : users) {
+                    if(mail.equals(email)){
+                        access1 = 1;
+                        passwordMail = mailDAO.passToEmail(email);
+                    }
+                    else {
+                        System.out.println("Podanego emailu nie ma w bazie danych!");
+                    }
+                }
+
+                if (passwordMail!=null){
+                    if(passwordMail.equals(haslo)){
+                        access2 = 1;
+                    }
+                    else {
+                        System.out.println("Podanego hasla nie ma w bazie danych!");
+                    }
+                }
+
+                if (access1 == 1 && access2 == 1){
+                    System.out.println("Uzyskano dostęp!");
+                    Main.stageMain.close();
+                    mailDAO.close();
+                    FXMLLoader loader = new FXMLLoader(new File("/mail.fxml").toURI().toURL());
+                    loader.setLocation(this.getClass().getResource("/mail.fxml"));
+                    AnchorPane anchorPane = loader.load();
+                    Stage stage = new Stage();
+
+                    Scene scene = new Scene(anchorPane);
+                    stage.setTitle("JavaMail");
+                    stage.setScene(scene);
+                    stage.setResizable(false);
+                    stage.show();
+                }
+                else {
+                    System.out.println("Nie uzyskano dostępu!");
+                }
             }
         }
     }

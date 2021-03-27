@@ -13,3 +13,5 @@ S
 #src/main/java/pl/Java/App/Main.java,3\6\36904c549339a9f44bdf6c5c9c2fb11fa2d2d5ef
 T
 $src/main/java/pl/Java/App/Users.java,a\2\a21ba3725f9e1f2292b2d821844f59ecaf0d3447
+f
+6src/main/java/pl/Java/Controllers/AdminController.java,2\3\23dfbc2f245dac5021790f34e5786b601343489e

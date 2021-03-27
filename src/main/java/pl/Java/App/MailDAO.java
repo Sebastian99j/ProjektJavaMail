@@ -1,6 +1,5 @@
 package pl.Java.App;
 
-import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,18 +9,18 @@ public class MailDAO {
 
     public MailDAO() {
         try {
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/userMail?serverTimezone=UTC", "root", "Master123!@#");
+            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/usermail?serverTimezone=UTC", "root", "Master123!@#");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
     public List<String> findMails() {
-        final String sql = "SELECT mail FROM userMailTable";
+        final String sql = "SELECT mail FROM userMailTable;";
         List<String> resultList = new ArrayList<>();
         try(Statement statement = connection.createStatement()){
             ResultSet resultSet = statement.executeQuery(sql);
-            if (resultSet.next()) {
+            while (resultSet.next()) {
                 String mail = resultSet.getString("mail");
                 resultList.add(mail);
             }
@@ -45,12 +44,12 @@ public class MailDAO {
         return password;
     }
 
-    public List<Users> allUsers(String mail) {
-        final String sql = "SELECT mail, password FROM userMailTable ORDER BY id asc;";
+    public List<Users> allUsers() {
+        final String sql = "SELECT mail, password FROM usermailtable ORDER BY id asc;";
         List<Users> users = new ArrayList<>();
         try(Statement statement = connection.createStatement()){
             ResultSet resultSet = statement.executeQuery(sql);
-            if (resultSet.next()) {
+            while (resultSet.next()) {
                 int idUsers = resultSet.getInt("id");
                 String mailUsers = resultSet.getString("mail");
                 String passUsers = resultSet.getString("password");
@@ -79,6 +78,16 @@ public class MailDAO {
         }
     }
 
+    public boolean deleteUser(String mail) {
+        final String sql = "DELETE FROM usermailtable WHERE mail='"+mail+"'";
+        try(Statement statement = connection.createStatement()){
+            int updatedRows = statement.executeUpdate(sql);
+            return updatedRows != 0;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public Integer getIdUsers(){
         final String sql = "SELECT id FROM usermailtable ORDER BY id ASC";
         int id = 0;
@@ -93,21 +102,6 @@ public class MailDAO {
             throw new RuntimeException(e);
         }
     }
-
-//    public List<String> findPassword() {
-//        final String sql = "SELECT password FROM userMailTable";
-//        List<String> resultList = new ArrayList<>();
-//        try(Statement statement = connection.createStatement()){
-//            ResultSet resultSet = statement.executeQuery(sql);
-//            if (resultSet.next()) {
-//                String password = resultSet.getString("password");
-//                resultList.add(password);
-//            }
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
-//        return resultList;
-//    }
 
     public void close() {
         try {

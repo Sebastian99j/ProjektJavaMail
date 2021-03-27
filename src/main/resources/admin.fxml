@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="713.0" prefWidth="1070.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.Java.Controllers.AdminController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="BOTTOM" layoutX="106.0" layoutY="50.0" prefHeight="104.0" prefWidth="888.0" style="-fx-border-color: black;" text="PANEL ADMINISTRATORA">
+         <font>
+            <Font size="71.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="27.0" layoutY="173.0" prefHeight="519.0" prefWidth="496.0" style="-fx-border-color: black; -fx-background-color: grey;">
+         <children>
+            <Label layoutX="90.0" layoutY="29.0" prefHeight="47.0" prefWidth="334.0" text="DODAJ UŻYTKOWNIKA" textAlignment="CENTER">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Button layoutX="187.0" layoutY="447.0" mnemonicParsing="false" onAction="#addUser" prefHeight="47.0" prefWidth="141.0" text="Zatwierdź">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Label layoutX="44.0" layoutY="172.0" prefHeight="38.0" prefWidth="68.0" text="Email:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="261.0" prefHeight="36.0" prefWidth="68.0" text="Hasło:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newMail" layoutX="112.0" layoutY="176.0" prefHeight="31.0" prefWidth="302.0" />
+            <TextField fx:id="newPassword" layoutX="112.0" layoutY="264.0" prefHeight="31.0" prefWidth="302.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="550.0" layoutY="173.0" prefHeight="519.0" prefWidth="496.0" style="-fx-background-color: grey; -fx-border-color: black;">
+         <children>
+            <ListView fx:id="lists" layoutX="13.0" layoutY="14.0" prefHeight="418.0" prefWidth="470.0">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                        <CheckMenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </ListView>
+            <Button layoutX="270.0" layoutY="450.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="51.0" prefWidth="151.0" text="Usuń">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="64.0" layoutY="450.0" mnemonicParsing="false" onAction="#refresh" prefHeight="38.0" prefWidth="173.0" text="Odśwież">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

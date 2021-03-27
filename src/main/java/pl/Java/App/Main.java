@@ -30,6 +30,7 @@ public class Main extends Application {
         Scene scene = new Scene(anchorPane);
         stage.setTitle("Logowanie");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 }
