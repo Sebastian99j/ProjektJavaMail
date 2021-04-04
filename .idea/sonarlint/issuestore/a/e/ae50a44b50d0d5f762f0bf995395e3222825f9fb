@@ -1,16 +1,16 @@
 
+g	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ήϊτ¨‡/
 U	java:S106;"9Replace this use of System.out or System.err by a logger.(€Ϋ„τ8ήϊτ¨‡/
+g	java:S112f"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ήϊτ¨‡/
 g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ήϊτ¨‡/
-g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ήϊτ¨‡/
-9
-java:S1116*"Remove this empty statement.(€Ϋ„τ8ήϊτ¨‡/
 G
 java:S3457A"%String contains no format specifiers.(ηΜ‰±ÿÿÿÿÿ8ήϊτ¨‡/
+9
+java:S1116*"Remove this empty statement.(€Ϋ„τ8ήϊτ¨‡/
+g	java:S112W"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ήϊτ¨‡/
 U	java:S106*"9Replace this use of System.out or System.err by a logger.(€Ϋ„τ8ήϊτ¨‡/
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ήϊτ¨‡/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ϋ±α‰
 9
 java:S1116;"Remove this empty statement.(€Ϋ„τ8ήϊτ¨‡/
-g	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ήϊτ¨‡/
-g	java:S112W"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ήϊτ¨‡/
 g	java:S112n"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ήϊτ¨‡/
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ϋ±α‰
-g	java:S112f"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ήϊτ¨‡/

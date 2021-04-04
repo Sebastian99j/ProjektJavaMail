@@ -1,10 +1,10 @@
 
-c
-java:S1126M"AReplace this if-then-else statement by a single return statement.(¼‚­Åûÿÿÿÿ8žòû¥‡/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰Æ®Ä
 9
 java:S1643K"Use a StringBuilder instead.(¨Åºë8»ºù¥‡/
-U	java:S106&"9Replace this use of System.out or System.err by a logger.(ûÓÇÁ8èª‡¥‡/
-U	java:S106D"9Replace this use of System.out or System.err by a logger.(–ËªÈ8…èðª‡/
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰Æ®Ä
 Z	java:S1064"9Replace this use of System.out or System.err by a logger.(ƒ´º†ÿÿÿÿÿ8ž‚Ø§‡/
+U	java:S106D"9Replace this use of System.out or System.err by a logger.(–ËªÈ8…èðª‡/
+U	java:S106&"9Replace this use of System.out or System.err by a logger.(ûÓÇÁ8èª‡¥‡/
 Z	java:S1060"9Replace this use of System.out or System.err by a logger.(úß±Ýûÿÿÿÿ8¿¶º­‡/
+c
+java:S1126M"AReplace this if-then-else statement by a single return statement.(¼‚­Åûÿÿÿÿ8žòû¥‡/

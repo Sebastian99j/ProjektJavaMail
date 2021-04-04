@@ -1,20 +1,20 @@
 
-B
-java:S1659;"%Declare "access2" on a separate line.(¥ËŠ8­²É‘ƒ/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰Æ®Ä
+U	java:S106@"9Replace this use of System.out or System.err by a logger.(ûÓÇÁ8­²É‘ƒ/
+Z	java:S106D"9Replace this use of System.out or System.err by a logger.(á•¦âûÿÿÿÿ8÷­ê¤‡/
+Z	java:S106a"9Replace this use of System.out or System.err by a logger.(„õ‹Óşÿÿÿÿ8Øµæ¤‡/
 ^
 java:S1075F"ARefactor your code to get this URI from a customizable parameter.(úŠÔ·8÷­ê¤‡/
-U	java:S106@"9Replace this use of System.out or System.err by a logger.(ûÓÇÁ8­²É‘ƒ/
 Z	java:S106u"9Replace this use of System.out or System.err by a logger.(å€‰üÿÿÿÿ8Øµæ¤‡/
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰Æ®Ä
-X
-java:S2696="6Make the enclosing method "static" or remove this set.(ú¼Îùÿÿÿÿ8­²É‘ƒ/
 ^
 java:S1075i"ARefactor your code to get this URI from a customizable parameter.(÷óí8Øµæ¤‡/
-U	java:S106f"9Replace this use of System.out or System.err by a logger.(Ï¼ï8Øµæ¤‡/
-Z	java:S106D"9Replace this use of System.out or System.err by a logger.(á•¦âûÿÿÿÿ8÷­ê¤‡/
-S
-java:S2696<"6Make the enclosing method "static" or remove this set.(éå¾—8­²É‘ƒ/
 t
 java:S3776:"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(Ù–íıÿÿÿÿ8É£‚ˆ†/
-Z	java:S106a"9Replace this use of System.out or System.err by a logger.(„õ‹Óşÿÿÿÿ8Øµæ¤‡/
+B
+java:S1659;"%Declare "access2" on a separate line.(¥ËŠ8­²É‘ƒ/
 U	java:S106X"9Replace this use of System.out or System.err by a logger.(ñõ‰8Øµæ¤‡/
+X
+java:S2696="6Make the enclosing method "static" or remove this set.(ú¼Îùÿÿÿÿ8­²É‘ƒ/
+U	java:S106f"9Replace this use of System.out or System.err by a logger.(Ï¼ï8Øµæ¤‡/
+S
+java:S2696<"6Make the enclosing method "static" or remove this set.(éå¾—8­²É‘ƒ/

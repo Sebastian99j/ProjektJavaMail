@@ -9,7 +9,7 @@ public class MailDAO {
 
     public MailDAO() {
         try {
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/usermail?serverTimezone=UTC", "root", "Master123!@#");
+            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/usermail?serverTimezone=UTC", "root", "admin");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -62,8 +62,7 @@ public class MailDAO {
     }
 
     public void addUser(Users user){
-        final String sql = String.format("INSERT INTO usermailtable (id,mail, password) VALUES (?,?,?)",
-                user.getId().toString(), user.getMail(), user.getPassword());
+        final String sql = "INSERT INTO usermailtable (id,mail, password) VALUES (?,?,?)";
         try (PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)){
             statement.setString(1, user.getId().toString());
             statement.setString(2, user.getMail());
